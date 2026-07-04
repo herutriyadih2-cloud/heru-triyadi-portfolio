@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: '/heru-triyadi-portfolio/',
-  plugins: [vue()]
+  base: '/',
+  plugins: [vue()],
 })

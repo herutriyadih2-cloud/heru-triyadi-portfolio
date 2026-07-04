@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+# Tambahkan baris ini agar GitHub memberikan izin akses untuk melakukan PUSH ke repo
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
