@@ -18,6 +18,7 @@ yarn-error.log*
 # IDE / Editor folders
 .vscode/
 .idea/
+.claude/
 *.suo
 *.ntvs*
 *.njsproj
