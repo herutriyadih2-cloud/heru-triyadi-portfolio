@@ -4,10 +4,55 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="https://github.com/herutriyadih2-cloud.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta name="theme-color" content="#0a0b0b" />
+
+    <!-- Pemulih rute SPA untuk GitHub Pages (pasangan dari public/404.html) -->
+    <script>
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
+
     <title>Heru Triyadi | Frontend Developer & UI/UX Designer</title>
+    <meta
+      name="description"
+      content="Heru Triyadi — Frontend Developer & UI/UX Designer spesialis Vue.js. Jasa pembuatan website, web app modern, optimasi SEO, dan portofolio profesional."
+    />
+    <meta
+      name="keywords"
+      content="Heru Triyadi, Frontend Developer, Vue.js, UI/UX Designer, Jasa Website, Web Developer Pontianak, Portofolio"
+    />
+    <meta name="author" content="Heru Triyadi" />
+
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Heru Triyadi | Frontend Developer & UI/UX Designer" />
+    <meta
+      property="og:description"
+      content="Frontend Developer spesialis Vue.js. Membangun website & web app modern yang responsif, cepat, dan interaktif."
+    />
+    <meta property="og:image" content="https://github.com/herutriyadih2-cloud.png" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Heru Triyadi | Frontend Developer & UI/UX Designer" />
+    <meta
+      name="twitter:description"
+      content="Frontend Developer spesialis Vue.js. Membangun website & web app modern yang responsif dan interaktif."
+    />
+    <meta name="twitter:image" content="https://github.com/herutriyadih2-cloud.png" />
   </head>
-  <body class="bg-slate-950">
+  <body class="bg-[#0a0b0b]">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

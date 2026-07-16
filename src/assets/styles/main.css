@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll + offset agar section tidak ketutup navbar fixed */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Warna seleksi teks */
+::selection {
+  background: rgba(34,211,238, 0.35);
+  color: #fff;
+}
+
+/* Hormati preferensi pengguna yang tidak suka animasi */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Efek teks mengetik pada Hero */
+.typed-caret {
+  border-right: 2px solid rgb(34,211,238);
+  animation: blinkCaret 0.8s step-end infinite;
+}
+@keyframes blinkCaret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(34,211,238);
+  }
+}
+
 /* Custom Scrollbar minimalis */
 ::-webkit-scrollbar {
   width: 8px;
@@ -15,4 +49,93 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
+}
+
+/* ============================================================
+   POLISH: Utilities animasi & micro-interaction
+   ============================================================ */
+
+/* Teks gradient bergerak (shimmer) — dipakai pada nama & judul */
+.text-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Kartu 3D tilt: transisi halus saat kursor keluar */
+.tilt-card {
+  transition: transform 0.25s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Spotlight: cahaya lembut mengikuti kursor pada kartu.
+   Butuh --mx & --my (posisi kursor) yang di-set via JS. */
+.spotlight {
+  position: relative;
+}
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(34,211,238, 0.16),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Reveal on-view (pengganti/pelengkap AOS untuk elemen tertentu) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tombol emas — glow lembut (tidak menyala berlebihan) */
+.btn-neon {
+  box-shadow: 0 0 14px rgba(34,211,238, 0.18);
+}
+.btn-neon:hover {
+  box-shadow: 0 0 22px rgba(34,211,238, 0.3);
+}
+
+/* Garis border gradient tipis untuk kartu unggulan */
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(34,211,238, 0.18),
+    0 20px 45px -20px rgba(30,64,175, 0.4);
+}
+
+/* Hormati preferensi reduced-motion untuk SEMUA animasi tambahan */
+@media (prefers-reduced-motion: reduce) {
+  .text-shimmer,
+  .stars,
+  .stars2,
+  .stars3 {
+    animation: none !important;
+  }
+  .tilt-card {
+    transform: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

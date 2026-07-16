@@ -30,3 +30,7 @@ Thumbs.db
 
 # Testing
 coverage/
+
+# Local scratch / helper
+paste-image.ps1
+public/paste.png

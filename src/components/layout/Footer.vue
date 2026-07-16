@@ -1,10 +1,10 @@
 <template>
-  <footer class="bg-slate-950 border-t border-slate-900 py-12">
+  <footer class="bg-[#0a0b0b] border-t border-slate-900 py-12">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       
       <div class="text-center md:text-left">
-        <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
-          Heru<span class="text-indigo-400">.Dev</span>
+        <a href="#" class="text-xl font-bold bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent tracking-tight">
+          Heru<span class="text-slate-300">.Dev</span>
         </a>
         <p class="text-xs text-slate-500 mt-2">
           &copy; {{ new Date().getFullYear() }} Heru Triyadi. All rights reserved.
@@ -24,7 +24,7 @@
         <a 
           href="https://instagram.com/betukuk09_" 
           target="_blank" 
-          class="p-2.5 bg-slate-900 border border-slate-800 text-slate-400 hover:text-pink-500 hover:border-pink-500/30 rounded-xl transition-all hover:-translate-y-0.5"
+          class="p-2.5 bg-slate-900 border border-slate-800 text-slate-400 hover:text-blue-500 hover:border-blue-500/30 rounded-xl transition-all hover:-translate-y-0.5"
           title="Instagram"
         >
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -48,9 +48,9 @@
         </a>
 
         <a 
-          href="https://wa.me/6285750871521" 
+          href="https://wa.me/6285650871521"
           target="_blank" 
-          class="p-2.5 bg-slate-900 border border-slate-800 text-slate-400 hover:text-emerald-400 hover:border-emerald-400/30 rounded-xl transition-all hover:-translate-y-0.5"
+          class="p-2.5 bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-300 hover:border-blue-400/30 rounded-xl transition-all hover:-translate-y-0.5"
           title="WhatsApp"
         >
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
